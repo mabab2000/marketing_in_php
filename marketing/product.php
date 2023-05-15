@@ -43,13 +43,14 @@ div.head {
 
 <section>
   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
-   
+   <h1 style="font-size: 2.2em; font-weight:bold;"><font color="green" >Product available in the kind of <?php echo $_GET["name"];?></font></h1>
     </header>
 
     <?php
 include('connection.php');
 // Retrieve images from database
-$sql = "SELECT * FROM images";
+$sql = "SELECT * FROM images WHERE type='" . $_GET["name"] . "'";
+
 $result = $conn->query($sql);
 ?>
 
@@ -58,7 +59,7 @@ $result = $conn->query($sql);
   <li>
   <p style=" font-weight:bold;font-size: large;color:blue;"><?php echo $row['head']; ?></p>
     <a href="prod.php?id=<?php echo $row['id'];?>" class="block overflow-hidden group">
-      <img src="data:image/jpeg;base64,<?php echo base64_encode($row['image']); ?>" alt="" width=100% height=50% />
+      <img src="data:image/jpeg;base64,<?php echo base64_encode($row['image']); ?>" alt="" width=100% height=100% />
       <div class="relative pt-3 bg-white">
         <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
         
