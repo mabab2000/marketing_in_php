@@ -45,7 +45,7 @@ div.head {
   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
    
     </header>
-
+   
     <?php
 include('connection.php');
 // Retrieve images from database
@@ -77,8 +77,10 @@ $result = $conn->query($sql);
   </li>
   <?php } ?>
 </ul>
-
+<?php include('footer.php');?>
   </div>
-</section>
+    
+  </section>
+
 </body>
 </html>

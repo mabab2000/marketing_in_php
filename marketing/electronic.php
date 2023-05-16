@@ -19,7 +19,7 @@ $result = $conn->query($query);
 -->
 
 <div class="overflow-x-auto">
-<table class="w-full min-w-full divide-y-2 divide-gray-200 bg-white text-sm border">
+<table >
     <thead >
       <tr>
         <th >
@@ -37,7 +37,7 @@ $result = $conn->query($query);
         <th >
           Type
         </th>
-        <th >
+        <th colspan=2 >
          Action 
         </th>
         <th class="px-4 py-2"></th>
@@ -59,6 +59,12 @@ $result = $conn->query($query);
   href="delete.php?id=<?php echo $row['id'];?>"
 >
   Delete
+</a>		
+<a
+  class="inline-block rounded border border-indigo-600 bg-green-600 px-12 py-3 text-sm font-medium text-green hover:bg-green-500 hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+  href="prod.php?id=<?php echo $row['id'];?>"
+>
+  view
 </a>			
 
           

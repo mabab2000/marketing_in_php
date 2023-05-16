@@ -2,6 +2,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    input[type="text"],select,
+    textarea {
+        background-color: grey;
+        padding:7px 10px;
+    }
+    input[type="submit"] {
+        background-color: green;
+        color:white;
+        padding:15px 10px;
+    }
+    input[type="email"] {
+        background-color: grey;
+        padding:15px 10px;
+    }
+    input[type="password"] {
+        background-color: grey;
+        padding:15px 10px;
+    }
+    </style>
 	<title>Registration Form</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,15 +68,14 @@
         <h1
           class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
         >
-          Welcome to Squid 🦑
+          Create account to manage digital marketing website 🦑
         </h1>
 
         <p class="mt-4 leading-relaxed text-gray-500">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
-          dolorum aliquam, quibusdam aperiam voluptatum.
+         
         </p>
 
-        <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+        <form method="post" action="register_process.php">
           <div class="col-span-6 sm:col-span-3">
             <label
               for="FirstName"
@@ -68,7 +87,7 @@
             <input
               type="text"
               id="FirstName"
-              name="first_name"
+              name="fname"
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
             />
           </div>
@@ -84,7 +103,16 @@
             <input
               type="text"
               id="LastName"
-              name="last_name"
+              name="lname"
+              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+            />
+           Phone
+            </label>
+
+            <input
+              type="text"
+              id="lname"
+              name="phone"
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
             />
           </div>
@@ -129,7 +157,7 @@
             <input
               type="password"
               id="PasswordConfirmation"
-              name="password_confirmation"
+              name="confirm_password"
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
             />
           </div>
@@ -143,23 +171,11 @@
                 class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
               />
 
-              <span class="text-sm text-gray-700">
-                I want to receive emails about events, product updates and
-                company announcements.
-              </span>
+              
             </label>
           </div>
 
-          <div class="col-span-6">
-            <p class="text-sm text-gray-500">
-              By creating an account, you agree to our
-              <a href="#" class="text-gray-700 underline">
-                terms and conditions
-              </a>
-              and
-              <a href="#" class="text-gray-700 underline">privacy policy</a>.
-            </p>
-          </div>
+         
 
           <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
             <button
@@ -180,29 +196,3 @@
 </section>
 
 
-<body>
-	<h1>Registration Form</h1>
-	<form method="post" action="register_process.php">
-		<label for="fname">First Name:</label><br>
-		<input type="text" id="fname" name="fname"><br>
-
-		<label for="lname">Last Name:</label><br>
-		<input type="text" id="lname" name="lname"><br>
-
-		<label for="phone">Phone:</label><br>
-		<input type="tel" id="phone" name="phone"><br>
-
-		<label for="email">Email:</label><br>
-		<input type="email" id="email" name="email"><br>
-
-		<label for="password">Password:</label><br>
-		<input type="password" id="password" name="password"><br>
-
-		<label for="confirm_password">Confirm Password:</label><br>
-		<input type="password" id="confirm_password" name="confirm_password"><br>
-
-		<input type="submit" value="Submit">
-	</form>
-	<p>Already have an account? <a href="login.php">Log in here</a>.</p>
-</body>
-</html>

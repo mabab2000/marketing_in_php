@@ -11,6 +11,9 @@
   display: inline-block;
   font-size:1.2em;
 }
+.header {
+  background-color:grey;
+}
 .horizontal-nav ul {
   background-color:blue;
 }
@@ -21,7 +24,7 @@
   font-size:20px;
  
   text-decoration: none;
-  color:grey;
+  color:white;
 }
 
 /* Optional styles for visual enhancements */
@@ -40,7 +43,8 @@ h1{
 
   </style>
 </header>
-<h1 style="font-size:2em;" ><center>Welcome to digital marketing websites</h1>
+<div class="header"><h1 style="font-size:2em;" ><center>Welcome to digital marketing websites</h1></div>
+<div class="horizontal-nav">
 <ul class="horizontal-nav">
 
 <li><a href="market.php">Home</a></li>
@@ -54,3 +58,4 @@ h1{
 
 
 </ul>
+</div>

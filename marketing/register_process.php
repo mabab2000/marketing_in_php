@@ -1,5 +1,5 @@
 <?php
-include('register.php');
+
 include('connection.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$fname = $_POST["fname"];
